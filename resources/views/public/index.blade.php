@@ -56,7 +56,7 @@
                                 Haz tu consulta
                             </h2>
                             <p class="text-white text-base xl:text-lg 2xl:text-xl font-manrope font-bold">
-                                (+51) 945 064 691
+                                (+51) 999 999 999
                             </p>
                         </div>
                     </div>

@@ -1057,7 +1057,7 @@ class IndexController extends Controller
         $emailadmin = $generales->email;
         $appUrl = env('APP_URL');
         $name = 'Administrador';
-        $mensaje = "Nueva solicitud de contacto - Adriana Pezo";
+        $mensaje = "Nueva solicitud de contacto - Codefinan";
         $mail = EmailConfig::config($name, $mensaje);
 
         try {
@@ -1121,15 +1121,14 @@ class IndexController extends Controller
                     <td>
                       <p
                         style="
-                          color: #6486CD;
+                          color: white;
                           font-size: 40px;
                           line-height: normal;
-                          font-family: Google Sans;
+                          font-family: Roboto;
                           font-weight: bold;
                         "
                       >
-                        ¡Gracias
-                        <span style="color: #354273">por escribirnos!</span>
+                        ¡Nuevo mensaje en codefinan.pe!
                       </p>
                     </td>
                   </tr>
@@ -1138,14 +1137,14 @@ class IndexController extends Controller
                     <td>
                       <p
                         style="
-                          color: #354273;
+                          color: white;
                           font-weight: 500;
                           font-size: 18px;
                           text-align: center;
                           width: 500px;
                           margin: 0 auto;
                           padding: 20px 0 5px 0;
-                          font-family: Google Sans;
+                          font-family: Roboto;
                         "
                       >
                         <span style="display: block">Hola ' . $name . '</span>
@@ -1157,17 +1156,17 @@ class IndexController extends Controller
                     <td>
                       <p
                         style="
-                          color: #354273;
+                          color: white;
                           font-weight: 500;
                           font-size: 18px;
                           text-align: center;
                           width: 500px;
                           margin: 0 auto;
                           padding: 0px 10px 5px 0px;
-                          font-family: Google Sans;
+                          font-family: Roboto;
                         "
                       >
-                        Tienes una nueva solicitud de contacto.
+                      Tienes un nuevo mensaje, para mas detalle revisar tu panel de administración.
                       </p>
                     </td>
                   </tr>
@@ -1177,11 +1176,11 @@ class IndexController extends Controller
                          target="_blank"
                         href="' .
                         $appUrl .
-                        '"
+                        '/login"
                         style="
                           text-decoration: none;
-                          background-color: #6486CD;
-                          color: #ffffff;
+                          background-color: #FF680F;
+                          color: white;
                           padding: 13px 20px;
                           display: inline-flex;
                           justify-content: center;
@@ -1189,12 +1188,12 @@ class IndexController extends Controller
                           align-items: center;
                           gap: 10px;
                           font-weight: 600;
-                          font-family: Google Sans;
+                          font-family: Roboto;
                           font-size: 16px;
                           margin-bottom: 350px;
                         "
                       >
-                        <span>Visita nuestra web</span>
+                        <span>Ir a panel de administración</span>
                       </a>
                     </td>
                   </tr>
@@ -1216,7 +1215,7 @@ class IndexController extends Controller
        
         $name = $data['full_name'];
         $appUrl = env('APP_URL');
-        $mensaje = 'Gracias por comunicarte con Adriana Pezo, en breve nos pondremos en contacto contigo.';
+        $mensaje = 'Gracias por comunicarte - Codefinan';
         $mail = EmailConfig::config($name, $mensaje);
         // $baseUrl = 'https://' . $_SERVER['HTTP_HOST'] . '/mail';
         // $baseUrllink = 'https://' . $_SERVER['HTTP_HOST'] . '/';
@@ -1282,15 +1281,15 @@ class IndexController extends Controller
                     <td>
                       <p
                         style="
-                          color: #6486CD;
+                          color: white;
                           font-size: 40px;
                           line-height: normal;
-                          font-family: Google Sans;
+                          font-family: Roboto;
                           font-weight: bold;
                         "
                       >
                         ¡Gracias
-                        <span style="color: #354273">por escribirnos!</span>
+                        <span style="color: white">por escribirnos!</span>
                       </p>
                     </td>
                   </tr>
@@ -1299,14 +1298,14 @@ class IndexController extends Controller
                     <td>
                       <p
                         style="
-                          color: #354273;
+                          color: white;
                           font-weight: 500;
                           font-size: 18px;
                           text-align: center;
                           width: 500px;
                           margin: 0 auto;
                           padding: 20px 0 5px 0;
-                          font-family: Google Sans;
+                          font-family: Roboto;
                         "
                       >
                         <span style="display: block">Hola ' . $name . '</span>
@@ -1318,14 +1317,14 @@ class IndexController extends Controller
                     <td>
                       <p
                         style="
-                          color: #354273;
+                          color: white;
                           font-weight: 500;
                           font-size: 18px;
                           text-align: center;
                           width: 500px;
                           margin: 0 auto;
                           padding: 0px 10px 5px 0px;
-                          font-family: Google Sans;
+                          font-family: Roboto;
                         "
                       >
                         En breve estaremos comunicandonos contigo.
@@ -1341,7 +1340,7 @@ class IndexController extends Controller
                         '"
                         style="
                           text-decoration: none;
-                          background-color: #6486CD;
+                          background-color: #FF680F;
                           color: #ffffff;
                           padding: 13px 20px;
                           display: inline-flex;
@@ -1350,7 +1349,7 @@ class IndexController extends Controller
                           align-items: center;
                           gap: 10px;
                           font-weight: 600;
-                          font-family: Google Sans;
+                          font-family: Roboto;
                           font-size: 16px;
                           margin-bottom: 350px;
                         "
