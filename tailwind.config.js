@@ -62,6 +62,7 @@ export default {
                 aequitas_bold: ["aequitas_bold"],
                 merchant_medium: ["merchant_medium"],
                 merchant_regular: ["merchant_regular"],
+                manrope: ["Manrope"],
 
             },
             fontSize: {

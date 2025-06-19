@@ -32,67 +32,92 @@
 @section('content')
     
     <main>
-        
-       
         <section id="bannerprincipal">
-            <div class="flex flex-col gap-10 w-full px-[5%] pt-10 md:pt-16 bg-white overflow-hidden">
+            <div class="flex flex-col justify-center gap-10 w-full  px-[5%] py-10 2xl:py-14 overflow-hidden bg-cover bg-center" style="background-image: url({{ asset('images/img/texturahero.png') }})">
                 
-                <div class="grid grid-cols-2 lg:grid-cols-5 gap-5 lg:gap-0">
-                    <div class="col-span-2 flex flex-col justify-between pb-0 lg:pb-10">
-                        <div class="flex flex-col p-2 justify-center items-start gap-8">
-                            <h2 class="text-[#09262A] font-merchant_medium text-5xl xl:text-6xl 2xl:text-7xl leading-[45px] xl:leading-[55px] tracking-tighter" data-aos="fade-down">Acompañamos el bienestar emocional y conductual de tu hijo</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-5 gap-5">
+                    
+                    <div class="lg:col-span-3 flex flex-col justify-center pb-0 lg:pb-10">
+                        <div class="flex flex-col p-2 justify-center items-start gap-1 max-w-lg 2xl:max-w-2xl">
+                            <h2 class="text-[#f26824] font-manrope font-extrabold text-lg xl:text-xl 2xl:text-2xl !tracking-normal">
+                                EMPRESA DE DESARROLLO DE SOFTWARE
+                            </h2>
                             
-                            <h2 class="text-[#1B4146] text-base xl:text-lg 2xl:text-xl font-Montserrat_Regular" data-aos="fade-down">
-                                Sabemos lo importante que es el bienestar emocional de los niños y adolescentes. Estamos aquí para escucharte y brindarte el apoyo que necesitas con empatía y profesionalismo.
+                            <h2 class="text-white text-3xl xl:text-[40px] 2xl:text-5xl font-manrope font-extrabold" >
+                                Impulsamos tu Empresa con Soluciones Financieras
                             </h2>
 
-                            <div class="flex flex-row justify-start items-start" data-aos="fade-down">
-                                <a href="#productoscarrusel" id="scrollButton" 
-                                    class=" text-white py-3 px-6 bg-[#B380B5] rounded-3xl text-base 2xl:text-lg font-Montserrat_SemiBold text-center max-w-xs">
-                                    Nuestros servicios
-                                </a>
-                            </div>
+                            <p class="text-white text-lg 2xl:text-xl font-manrope font-normal !tracking-normal mt-6" >
+                                Digitaliza tu empresa, con soluciones de casa de cambio digital e inversiones con tecnología hecha para crecer.
+                            </p>
                         </div>
-                        <div class="flex flex-col p-2 justify-center items-start" data-aos="fade-down">
-                            <h2 class="text-[#1B4146] text-base xl:text-lg 2xl:text-xl font-Montserrat_Regular">
+                        <div class="flex flex-col p-2 justify-center items-start w-full mt-10">
+                            <h2 class="text-[#f26824] text-base xl:text-lg 2xl:text-xl font-manrope font-extrabold">
                                 Haz tu consulta
                             </h2>
-                            <p class="text-[#1B4146] text-base xl:text-lg 2xl:text-xl font-Montserrat_Bold">
+                            <p class="text-white text-base xl:text-lg 2xl:text-xl font-manrope font-bold">
                                 (+51) 945 064 691
                             </p>
                         </div>
                     </div>
     
-                    <div class="col-span-2 flex flex-col justify-end items-center relative order-2 lg:order-1 ">
-                        <div class="relative w-[700px]" data-aos="fade-down">
-                            <img class="h-80 md:h-[300px] w-auto object-contain object-left absolute right-20 4xs:left-0 bottom-0" src="{{asset('images/img/texturaAP.png')}}"
-                                onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                            <img class="h-96 md:h-[650px] w-full object-contain  object-center relative z-10" src="{{asset('images/img/Dra.png')}}"
-                                onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                        </div>
-                    </div>
     
-                    <div class="col-span-2 lg:col-span-1 flex flex-col sm:flex-row gap-5 sm:gap-10 lg:flex-col justify-around items-start lg:items-end order-1 lg:order-2">
+                    <div class="lg:col-span-2 flex flex-col sm:flex-row gap-5 sm:gap-10 lg:flex-col justify-around items-start lg:items-end order-1 lg:order-2">
                         
-                        <div class="grid grid-cols-1 gap-2 xl:gap-4 z-20 min-w-[320px] xl:w-[340px] 2xl:w-[400px] 3xl:w-[450px] max-w-[600px] animate-jump-out animate-once animate-duration-[2000ms] animate-reverse">
-                            <div id="form-1" class="bg-[#F2F5FC] p-6 2xl:p-8 rounded-3xl flex flex-col gap-4">
-                                <h2 class="text-[#1B4146] text-base sm:text-lg 2xl:text-xl font-Montserrat_SemiBold">
-                                    Solicita información ahora vía WhatsApp
+                        <div class="grid grid-cols-1 gap-2 xl:gap-4 z-20 min-w-[320px] xl:w-[450px] 3xl:w-[600px] max-w-[600px] animate-jump-out animate-once animate-duration-[2000ms] animate-reverse">
+                            <div id="form-1" class="bg-[#031730] p-6 2xl:p-8 rounded-2xl flex flex-col gap-3">
+                                <h2 class="text-white text-base sm:text-lg xl:text-xl 2xl:text-2xl font-manrope font-medium !tracking-wide">
+                                    Consultoría y tecnología  financiera adaptadas a tu  medida
                                 </h2>
                                 <form class="space-y-2 4xs:space-y-4 2xl:space-y-4" id="dataWhatsapp">
                                   @csrf
-                                  <input type="text" name="full_name" placeholder="Nombre Completo" 
-                                      class="border-green-500 border-0  focus:!border-0 focus:!ring-0 focus:!ring-transparent
-                                      placeholder:text-[#AAC3E6] text-[#97adcb] font-Montserrat_Regular w-full py-3 px-2 rounded-3xl text-base 2xl:text-xl  placeholder-opacity-25 font-light  bg-white">
-                        
-                                  <input type="email" name="email" 
-                                      placeholder="Correo Electrónico"
-                                      class="border-green-500 border-0 focus:!border-0 focus:!ring-0 focus:!ring-transparent
-                                      placeholder:text-[#AAC3E6] text-[#97adcb] font-Montserrat_Regular w-full py-3 px-2 rounded-3xl text-base 2xl:text-xl  placeholder-opacity-25 font-light  bg-white">
-                        
-                                  <input type="text" name="phone" placeholder="Teléfono"
-                                      class="border-green-500 border-0 focus:!border-0 focus:!ring-0 focus:!ring-transparent
-                                      placeholder:text-[#AAC3E6] text-[#97adcb] font-Montserrat_Regular w-full py-3 px-2 rounded-3xl text-base 2xl:text-xl  placeholder-opacity-25 font-light  bg-white">
+                                  
+                                  <div class="flex flex-col gap-1">
+                                    <label class="text-white font-manrope text-sm 2xl:text-lg">Nombre completo</label>
+                                    <input type="text" name="full_name" placeholder="Ingresa tu nombre y apellido" 
+                                      class="border-0  focus:!border-0 focus:!ring-0 focus:!ring-transparent
+                                      placeholder:text-[#AAC3E6] text-[#031730] font-manrope w-full py-2.5 px-2 rounded-lg text-sm 2xl:text-lg  placeholder-opacity-25 font-light  bg-white">
+                                  </div>
+
+                                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div class="flex flex-col gap-1">
+                                        <label class="text-white font-manrope text-sm 2xl:text-lg">DNI/RUC (*)</label>
+                                        <input type="text" name="full_name" placeholder="Ingresa tu DNI/RUC" 
+                                          class="border-0  focus:!border-0 focus:!ring-0 focus:!ring-transparent
+                                          placeholder:text-[#AAC3E6] text-[#031730] font-manrope w-full py-2.5 px-2 rounded-lg text-sm 2xl:text-lg  placeholder-opacity-25 font-light  bg-white">
+                                    </div>
+
+                                    <div class="flex flex-col gap-1">
+                                        <label class="text-white font-manrope text-sm 2xl:text-lg">Teléfono (*)</label>
+                                        <input type="text" name="phone" placeholder="+51" 
+                                          class="border-0  focus:!border-0 focus:!ring-0 focus:!ring-transparent
+                                          placeholder:text-[#AAC3E6] text-[#031730] font-manrope w-full py-2.5 px-2 rounded-lg text-sm 2xl:text-lg  placeholder-opacity-25 font-light  bg-white">
+                                    </div>
+                                  </div>
+
+                                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div class="flex flex-col gap-1">
+                                        <label class="text-white font-manrope text-sm 2xl:text-lg">Correo electrónico (*)</label>
+                                        <input type="email" name="email" placeholder="tu@mail.com" 
+                                          class="border-0  focus:!border-0 focus:!ring-0 focus:!ring-transparent
+                                          placeholder:text-[#AAC3E6] text-[#031730] font-manrope w-full py-2.5 px-2 rounded-lg text-sm 2xl:text-lg  placeholder-opacity-25 font-light  bg-white">
+                                    </div>
+
+                                    <div class="flex flex-col gap-1">
+                                        <label class="text-white font-manrope text-sm 2xl:text-lg">Empresa</label>
+                                        <input type="text" name="full_name" placeholder="Nombre de la empresa" 
+                                          class="border-0  focus:!border-0 focus:!ring-0 focus:!ring-transparent
+                                          placeholder:text-[#AAC3E6]  text-[#031730] font-manrope w-full py-2.5 px-2 rounded-lg text-sm 2xl:text-lg  placeholder-opacity-25 font-light  bg-white">
+                                    </div>
+                                  </div>
+
+                                  <div class="flex flex-col gap-1">
+                                    <label class="text-white font-manrope text-sm 2xl:text-lg">Requerimiento (*)</label>
+                                    <textarea rows="1" name="full_name" placeholder="Necesito..." 
+                                      class="border-0  focus:!border-0 focus:!ring-0 focus:!ring-transparent
+                                      placeholder:text-[#AAC3E6] text-[#031730] font-manrope w-full py-2.5 px-2 rounded-lg text-sm 2xl:text-lg  placeholder-opacity-25 font-light  bg-white"></textarea>
+                                  </div>
+                                  
                                   
                                   <input type="hidden" name="client_width" id="anchodispositivo">
                                   <input type="hidden" name="client_height" id="largodispositivo">
@@ -103,9 +128,11 @@
                                      
                         
                                   <button type="submit"
-                                      class="font-Montserrat_Medium text-white py-3 px-2 bg-[#1E7B82] justify-center items-center rounded-3xl inline-flex text-base 2xl:text-xl w-full">
-                                      <span>Hablar con la Dra. Adriana Pezo</span>
+                                      class="font-manrope text-white py-3 px-2 bg-[#FF680F] justify-center items-center rounded-lg inline-flex text-base 2xl:text-xl w-full">
+                                      <span>Enviar solicitud</span>
                                   </button>
+
+                                  <div class="font-manrope font-normal text-sm 2xl:text-base text-white text-center">Al registrarte, aceptas nuestros términos de servicio y política de privacidad.</div>
                                 </form>
                                 
                             </div>
@@ -117,49 +144,40 @@
             </div>
         </section>
 
-        <section  class="w-full items-start px-[5%] py-8 bg-[#6486CD] text-[#252222] bg-cover bg-center" style="background-image: url({{ asset('images/img/textura_beneficios.png') }})">
+        <section  class="w-full items-start px-[5%] py-8 bg-[#E9EFFC] text-[#021226] bg-cover bg-center">
             <div class="grid grid-cols-1" data-aos="fade-down">
                 <div>
                     <div class="swiper beneficios">
                         <div class="swiper-wrapper">
                             
                             <div class="swiper-slide">
-                                <div class="flex flex-col gap-4 items-start min-w-[240px]">
-                                    <div class="bg-white rounded-full w-14 h-14 flex flex-row justify-center items-center">
-                                        <img  class="object-contain w-8" loading="lazy" src="{{asset('images/svg/personas.svg')}}" onerror="this.onerror=null;this.src='{{ asset('images/imagen/noimagen.jpg') }}';"/>
-                                    </div>
-                                    <div class="flex flex-col text-white">
-                                        <h2 class="text-lg xl:text-xl font-Montserrat_SemiBold !leading-none max-w-xs">Atención personalizada y cercana</h2>
-                                        <p class="mt-2 text-base font-Montserrat_Regular leading-5">
-                                            Evaluación y tratamiento adaptado a cada niño y adolescente.
+                                <div class="flex flex-col gap-4 items-start min-w-[240px] xl:w-96 mx-auto">
+                                    <div class="flex flex-col">
+                                        <h2 class="text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl font-manrope font-bold !leading-none max-w-xs flex flex-row gap-1"><span class="text-[#FF680F]">+</span>20</h2>
+                                        <p class="mt-2 text-base 2xl:text-lg font-manrope font-normal leading-5">
+                                            Años de experiencia del equipo en  proyectos
                                         </p>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="swiper-slide">
-                                <div class="flex flex-col gap-4 items-start min-w-[240px]">
-                                    <div class="bg-white rounded-full w-14 h-14 flex flex-row justify-center items-center">
-                                        <img  class="object-contain w-8" loading="lazy" src="{{asset('images/svg/manos.svg')}}" onerror="this.onerror=null;this.src='{{ asset('images/imagen/noimagen.jpg') }}';"/>
-                                    </div>
-                                    <div class="flex flex-col text-white">
-                                        <h2 class="text-lg xl:text-xl font-Montserrat_SemiBold !leading-none max-w-xs">Atención personalizada y cercana</h2>
-                                        <p class="mt-2 text-base font-Montserrat_Regular leading-5">
-                                            Acompañamiento profesional para fortalecer su bienestar mental.
+                                <div class="flex flex-col gap-4 items-start min-w-[240px] xl:w-96 mx-auto">
+                                    <div class="flex flex-col">
+                                        <h2 class="text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl font-manrope font-bold !leading-none max-w-xs flex flex-row gap-1">100<span class="text-[#FF680F]">%</span></h2>
+                                        <p class="mt-2 text-base 2xl:text-lg font-manrope font-normal leading-5">
+                                            de satisfacción en entregas
                                         </p>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="swiper-slide">
-                                <div class="flex flex-col gap-4 items-start min-w-[240px]">
-                                    <div class="bg-white rounded-full w-14 h-14 flex flex-row justify-center items-center">
-                                        <img  class="object-contain w-8" loading="lazy" src="{{asset('images/svg/quiz.svg')}}" onerror="this.onerror=null;this.src='{{ asset('images/imagen/noimagen.jpg') }}';"/>
-                                    </div>
-                                    <div class="flex flex-col text-white">
-                                        <h2 class="text-lg xl:text-xl font-Montserrat_SemiBold !leading-none max-w-xs">Atención personalizada y cercana</h2>
-                                        <p class="mt-2 text-base font-Montserrat_Regular leading-5">
-                                            Métodos actualizados en psiquiatría infantil y adolescente.
+                                <div class="flex flex-col gap-4 items-start min-w-[240px] xl:w-96 mx-auto">
+                                    <div class="flex flex-col">
+                                        <h2 class="text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl font-manrope font-bold !leading-none max-w-xs flex flex-row gap-1"><span class="text-[#FF680F]">+</span>500 hrs.</h2>
+                                        <p class="mt-2 text-base 2xl:text-lg font-manrope font-normal leading-5">
+                                            de consultoría especializada en tesorería
                                         </p>
                                     </div>
                                 </div>
@@ -171,562 +189,354 @@
             </div>
         </section>
 
-        <section class="px-[5%] py-10 lg:py-20 bg-white" id="productoscarrusel">
-            <div class="flex flex-col gap-8 md:gap-12" >
+        <section class="px-[5%] bg-cover bg-center" style="background-image: url({{ asset('images/img/texturamid.png') }})">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-10">
                 
-                <div data-aos="fade-down" class='flex flex-col lg:flex-row lg:justify-between items-start justify-center gap-5'>
-                  <div class='flex flex-col gap-3 max-w-lg'>
-                      <h1 class="tracking-tighter text-4xl 2xl:text-5xl font-Montserrat_Bold font-bold text-[#09262A] leading-none">
-                        Nuestros servicios
-                      </h1>
-                      
-                      {{-- <p class="text-base font-Montserrat_Regular tracking-normal text-[#1B4146]">
-                        Praesent in commodo lectus, vitae dictum nulla. Sed nec finibus quam. Integer ultricies dolor ut magna.
-                      </p> --}}
-                  </div>
-                  <div class="flex flex-col">
-                    <div class="bg-[#F2F5FC] flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-3 p-6 rounded-3xl items-center">
-                      <p class="text-[#506DC0] text-base lg:text-lg font-Montserrat_SemiBold max-w-[300px]">
-                        Si crees que necesita apoyo,
-                        estoy aquí para ayudarte
-                      </p>
-                      <a target="_blank"  href="https://api.whatsapp.com/send?phone={{ $general[0]->whatsapp }}&text={{ $general[0]->mensaje_whatsapp }}"
-                        class="w-auto bg-[#6486CD] px-6 py-4 rounded-3xl text-white font-Montserrat_Medium">
-                        Hablar con un experto
-                      </a>
-                      
-                    </div>
-                  </div>
-                </div>
-
-                <div  class="grilla grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-y-5 gap-x-8 hidden sm:grid">
-                    <div data-aos="fade-down" class="servicio flex flex-col group relative">
-                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
-                            <div class="max-w-full flex flex-col items-center justify-center w-full">
-                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_1.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                            </div>
-                        </div>
-                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
-                            <div class="flex flex-row w-full justify-center items-center">
-                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Autismo (TEA)</h2>
-                            </div>
-                        </div>
-                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
-                                Agendar cita
-                            </a>
-                        </div>
-                    </div>
-
-                    <div data-aos="fade-down" class="servicio flex flex-col group relative">
-                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
-                            <div class="max-w-full flex flex-col items-center justify-center w-full">
-                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_2.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                            </div>
-                        </div>
-                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
-                            <div class="flex flex-row w-full justify-center items-center">
-                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">TDAH (trastorno por déficit de atención e hiperactividad)</h2>
-                            </div>
-                        </div>
-                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
-                                Agendar cita
-                            </a>
-                        </div>
-                    </div>
-
-                    <div data-aos="fade-down" class="servicio flex flex-col group relative">
-                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
-                            <div class="max-w-full flex flex-col items-center justify-center w-full">
-                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_3.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                            </div>
-                        </div>
-                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
-                            <div class="flex flex-row w-full justify-center items-center">
-                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Impulsividad, agresividad en niños y adolescentes</h2>
-                            </div>
-                        </div>
-                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
-                                Agendar cita
-                            </a>
-                        </div>
-                    </div>
-
-                    <div data-aos="fade-down" class="servicio flex flex-col group relative">
-                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
-                            <div class="max-w-full flex flex-col items-center justify-center w-full">
-                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_4.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                            </div>
-                        </div>
-                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
-                            <div class="flex flex-row w-full justify-center items-center">
-                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Trastornos de conducta en la infancia y la adolescencia</h2>
-                            </div>
-                        </div>
-                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
-                                Agendar cita
-                            </a>
-                        </div>
-                    </div>
-
-                    <div data-aos="fade-down" class="servicio flex flex-col group relative">
-                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
-                            <div class="max-w-full flex flex-col items-center justify-center w-full">
-                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_5.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                            </div>
-                        </div>
-                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
-                            <div class="flex flex-row w-full justify-center items-center">
-                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Trastornos del estado de ánimo en la infancia y la adolescencia</h2>
-                            </div>
-                        </div>
-                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
-                                Agendar cita
-                            </a>
-                        </div>
-                    </div>
-
-                    <div data-aos="fade-down" class="servicio flex flex-col group relative">
-                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
-                            <div class="max-w-full flex flex-col items-center justify-center w-full">
-                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_6.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                            </div>
-                        </div>
-                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
-                            <div class="flex flex-row w-full justify-center items-center">
-                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Trastornos de ansiedad</h2>
-                            </div>
-                        </div>
-                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
-                                Agendar cita
-                            </a>
-                        </div>
-                    </div>
-
-                    <div data-aos="fade-down" class="servicio flex flex-col group relative">
-                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
-                            <div class="max-w-full flex flex-col items-center justify-center w-full">
-                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_7.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                            </div>
-                        </div>
-                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
-                            <div class="flex flex-row w-full justify-center items-center">
-                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Transtornos obsesivo compulsivo</h2>
-                            </div>
-                        </div>
-                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
-                                Agendar cita
-                            </a>
-                        </div>
-                    </div>
-
-                    <div data-aos="fade-down" class="servicio flex flex-col group relative">
-                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
-                            <div class="max-w-full flex flex-col items-center justify-center w-full">
-                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_8.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                            </div>
-                        </div>
-                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
-                            <div class="flex flex-row w-full justify-center items-center">
-                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Trastornos de la conducta alimentaria: anorexia, bulimia</h2>
-                            </div>
-                        </div>
-                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
-                                Agendar cita
-                            </a>
-                        </div>
-                    </div>
-
-                    <div data-aos="fade-down" class="servicio flex flex-col group relative">
-                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
-                            <div class="max-w-full flex flex-col items-center justify-center w-full">
-                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_9.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                            </div>
-                        </div>
-                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
-                            <div class="flex flex-row w-full justify-center items-center">
-                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Transtornos relacionados con traumas y factores de estrés</h2>
-                            </div>
-                        </div>
-                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
-                                Agendar cita
-                            </a>
-                        </div>
-                    </div>
-
-                    <div data-aos="fade-down" class="servicio flex flex-col group relative">
-                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
-                            <div class="max-w-full flex flex-col items-center justify-center w-full">
-                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_10.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                            </div>
-                        </div>
-                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
-                            <div class="flex flex-row w-full justify-center items-center">
-                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Trastornos del sueño-vigilia</h2>
-                            </div>
-                        </div>
-                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
-                                Agendar cita
-                            </a>
-                        </div>
-                    </div>
-
-                    <div data-aos="fade-down" class="servicio flex flex-col group relative">
-                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
-                            <div class="max-w-full flex flex-col items-center justify-center w-full">
-                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_11.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                            </div>
-                        </div>
-                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
-                            <div class="flex flex-row w-full justify-center items-center">
-                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Depresión en niños y adolescentes</h2>
-                            </div>
-                        </div>
-                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
-                                Agendar cita
-                            </a>
-                        </div>
-                    </div>
-
-                    <div data-aos="fade-down" class="servicio flex flex-col group relative">
-                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
-                            <div class="max-w-full flex flex-col items-center justify-center w-full">
-                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_12.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                            </div>
-                        </div>
-                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
-                            <div class="flex flex-row w-full justify-center items-center">
-                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Trastornos del aprendizaje</h2>
-                            </div>
-                        </div>
-                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
-                                Agendar cita
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex sm:hidden">
-                    <div class="w-full" data-aos="fade-down">
-                        <div class="swiper servicios">
-                            <div class="swiper-wrapper">
-
-                                <div class="swiper-slide">
-                                    <div class="servicio flex flex-col group relative">
-                                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
-                                            <div class="max-w-full flex flex-col items-center justify-center w-full">
-                                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_1.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
-                                            <div class="flex flex-row w-full justify-center items-center">
-                                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Autismo (TEA)</h2>
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
-                                                Agendar cita
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <div class="servicio flex flex-col group relative">
-                                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
-                                            <div class="max-w-full flex flex-col items-center justify-center w-full">
-                                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_2.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
-                                            <div class="flex flex-row w-full justify-center items-center">
-                                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">TDAH (trastorno por déficit de atención e hiperactividad)</h2>
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
-                                                Agendar cita
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <div class="servicio flex flex-col group relative">
-                                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
-                                            <div class="max-w-full flex flex-col items-center justify-center w-full">
-                                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_3.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
-                                            <div class="flex flex-row w-full justify-center items-center">
-                                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Impulsividad, agresividad en niños y adolescentes</h2>
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
-                                                Agendar cita
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <div class="servicio flex flex-col group relative">
-                                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
-                                            <div class="max-w-full flex flex-col items-center justify-center w-full">
-                                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_4.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
-                                            <div class="flex flex-row w-full justify-center items-center">
-                                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Trastornos de conducta en la infancia y la adolescencia</h2>
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
-                                                Agendar cita
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <div class="servicio flex flex-col group relative">
-                                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
-                                            <div class="max-w-full flex flex-col items-center justify-center w-full">
-                                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_5.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
-                                            <div class="flex flex-row w-full justify-center items-center">
-                                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Trastornos del estado de ánimo en la infancia y la adolescencia</h2>
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
-                                                Agendar cita
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <div class="servicio flex flex-col group relative">
-                                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
-                                            <div class="max-w-full flex flex-col items-center justify-center w-full">
-                                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_6.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
-                                            <div class="flex flex-row w-full justify-center items-center">
-                                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Trastornos de ansiedad</h2>
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
-                                                Agendar cita
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <div class="servicio flex flex-col group relative">
-                                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
-                                            <div class="max-w-full flex flex-col items-center justify-center w-full">
-                                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_7.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
-                                            <div class="flex flex-row w-full justify-center items-center">
-                                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Transtornos obsesivo compulsivo</h2>
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
-                                                Agendar cita
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <div class="servicio flex flex-col group relative">
-                                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
-                                            <div class="max-w-full flex flex-col items-center justify-center w-full">
-                                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_8.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
-                                            <div class="flex flex-row w-full justify-center items-center">
-                                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Trastornos de la conducta alimentaria: anorexia, bulimia</h2>
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
-                                                Agendar cita
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <div class="servicio flex flex-col group relative">
-                                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
-                                            <div class="max-w-full flex flex-col items-center justify-center w-full">
-                                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_9.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
-                                            <div class="flex flex-row w-full justify-center items-center">
-                                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Transtornos relacionados con traumas y factores de estrés</h2>
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
-                                                Agendar cita
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <div class="servicio flex flex-col group relative">
-                                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
-                                            <div class="max-w-full flex flex-col items-center justify-center w-full">
-                                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_10.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
-                                            <div class="flex flex-row w-full justify-center items-center">
-                                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Trastornos del sueño-vigilia</h2>
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
-                                                Agendar cita
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <div class="servicio flex flex-col group relative">
-                                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
-                                            <div class="max-w-full flex flex-col items-center justify-center w-full">
-                                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_11.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
-                                            <div class="flex flex-row w-full justify-center items-center">
-                                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Depresión en niños y adolescentes</h2>
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
-                                                Agendar cita
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <div class="servicio flex flex-col group relative">
-                                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
-                                            <div class="max-w-full flex flex-col items-center justify-center w-full">
-                                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_12.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
-                                            <div class="flex flex-row w-full justify-center items-center">
-                                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Trastornos del aprendizaje</h2>
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
-                                                Agendar cita
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex flex-row justify-start ml-10">
-                                <div class="swiper-servicios !flex justify-center py-3 mt-3 "></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-        
-        @if ($testimonie->count() > 0)
-            <section class="bg-center bg-cover" style="background-image: url({{ asset('images/img/textura_testimonios.png') }})">
-                <div data-aos="fade-down" class="grid grid-cols-1 md:grid-cols-2 w-full gap-12 px-[5%]">
-        
-                <div class="flex flex-col justify-end items-center px-0 lg:px-[5%] order-2 md:order-1">
-                    <div class="w-full max-h-[560px] 2xl:max-h-[1000px] flex flex-col justify-end -mt-20  2xl:mt-0">
-                        <img class="w-full h-full object-contain object-bottom"  src="{{ asset('images/img/testimonios_AP.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                    </div>
-                </div>
-        
-                <div class="flex flex-col justify-center gap-5 text-textWhite lg:pr-[5%] py-10 xl:py-12 order-1 md:order-2">
-                    <h1 class="tracking-tighter text-2xl  lg:text-4xl 2xl:text-5xl font-Montserrat_Bold font-bold text-[#09262A] leading-none">
-                        Lo que dicen las familias
-                    </h1>
-                    <div class="w-full">
-                        <div class="swiper testimonios">
-                            <div class="swiper-wrapper">
-                                @foreach ($testimonie as $testimony)
-                                    <div class="swiper-slide">
-                                        <div class="bg-[#FFFFFF] relative p-5 lg:p-8 gap-3 flex flex-col rounded-xl h-auto">
-                                            <div>
-                                                <p class="text-[#1B4146] text-base lg:text-[17px] 2xl:text-xl font-Montserrat_Regular">
-                                                    {{$testimony->testimonie}}
-                                                </p>
-                                            </div>
-                                            <div class="flex flex-row gap-3 items-center">
-                                                <img class="w-12 h-12 rounded-full object-contain"  src="{{ asset($testimony->ocupation)}}" />
-                                                <div class="flex flex-col gap-0">
-                                                    <h3 class="text-[#09262A] font-Montserrat_SemiBold leading-none">{{$testimony->name}}</h3>
-                                                    <span class="text-[#1B4146] text-sm font-Montserrat_Regular leading-none">{{$testimony->email}}</span>
-                                                </div>
-                                            
-                                            </div>
-                                        </div>
-                                    </div>
-                                @endforeach
-                            </div>
-                            <div class="flex flex-row justify-start ml-10">
-                                <div class="swiper-testimonios !flex justify-center py-3 mt-3 "></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex flex-col p-2 justify-center items-end">
-                        <h2 class="text-[#1B4146] text-base xl:text-lg 2xl:text-xl font-Montserrat_Regular">
-                            Haz tu consulta
+                <div class="py-10 lg:py-20 flex flex-col gap-10">
+                    <div class="flex flex-col gap-3">
+                        <h2 class="text-[#021226] text-3xl xl:text-[40px] 2xl:text-5xl font-manrope font-bold" data-aos="fade-down">
+                            Tu Socio Estratégico en Innovación Financiera
                         </h2>
-                        <p class="text-[#1B4146] text-base xl:text-lg 2xl:text-xl font-Montserrat_Bold">
-                            (+51) 945 064 691
+
+                        <p class="text-[#021226] text-lg 2xl:text-xl font-manrope font-normal !tracking-normal" data-aos="fade-down">
+                            Llevamos más de 6 años digitalizando y optimizando operaciones financieras. Desarrollamos soluciones tecnológicas y consultoría especializada para fintech, casas de cambio y entidades  financieras.
                         </p>
                     </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                        <div class="flex flex-col gap-2 justify-center font-manrope font-normal text-base 2xl:text-lg items-start bg-[#E9EFFC] rounded-xl overflow-hidden p-6" data-aos="fade-down">
+                            <h2 class="text-[#021226] text-lg xl:text-xl 2xl:text-2xl font-manrope font-bold" >
+                                Clientes...
+                            </h2>
+                            <ul class="flex flex-col gap-1">
+                                <li class="flex flex-row gap-2 items-center justify-start">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M3.33398 9.33301L5.66732 11.6663L12.6673 4.33301" stroke="#FF680F" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span>Kyodai ETF</span>
+                                </li>
+                                <li class="flex flex-row gap-2 items-center justify-start">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M3.33398 9.33301L5.66732 11.6663L12.6673 4.33301" stroke="#FF680F" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span>Caja Maynas</span>
+                                </li>
+                                <li class="flex flex-row gap-2 items-center justify-start">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M3.33398 9.33301L5.66732 11.6663L12.6673 4.33301" stroke="#FF680F" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span>Caja Huancayo</span>
+                                </li>
+                                <li class="flex flex-row gap-2 items-center justify-start">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M3.33398 9.33301L5.66732 11.6663L12.6673 4.33301" stroke="#FF680F" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span>Primus Capital Perú</span>
+                                </li>
+                                <li class="flex flex-row gap-2 items-center justify-start">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M3.33398 9.33301L5.66732 11.6663L12.6673 4.33301" stroke="#FF680F" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span>Cambia FX</span>
+                                </li>
+                                <li class="flex flex-row gap-2 items-center justify-start">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M3.33398 9.33301L5.66732 11.6663L12.6673 4.33301" stroke="#FF680F" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span>Sonda</span>
+                                </li>
+                                <li class="flex flex-row gap-2 items-center justify-start">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M3.33398 9.33301L5.66732 11.6663L12.6673 4.33301" stroke="#FF680F" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span>Clínica Santa Lucía</span>
+                                </li>
+                            </ul>
+                            <h2 class="text-[#021226] text-lg xl:text-xl 2xl:text-2xl font-manrope font-bold">
+                                confían en nosotros.
+                            </h2>
+                        </div>
+
+                        <div class="flex flex-col gap-2 justify-center items-center font-manrope font-normal text-base 2xl:text-lg text-center bg-[#E9EFFC] rounded-xl overflow-hidden p-6" data-aos="fade-down">
+                                <img class="object-bottom" src="{{ asset('images/img/iconocod.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
+                                <h2 class="text-[#021226] text-lg xl:text-xl 2xl:text-2xl font-manrope font-bold" >
+                                    Innovación con confianza total
+                                </h2>
+                                <p>Comprometidos con la seguridad, la eficiencia y la innovación.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col justify-end items-center">
+                    <img class="object-bottom" src="{{ asset('images/img/chucos.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
                 </div>
 
+            </div>
+        </section>
+        
+        <section class="px-[5%] bg-cover bg-center relative py-10 lg:py-16" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url({{ asset('images/img/texturaf.png') }})">
+           
+            <div class="grid grid-cols-1 gap-20">
+                
+                <div class="flex flex-col gap-10">
+                    <div class="flex flex-col max-w-xl 2xl:max-w-2xl mx-auto text-center">
+                        <h2 class="text-[#FF680F] text-3xl xl:text-[40px] 2xl:text-5xl font-manrope font-bold" data-aos="fade-down">
+                            Nuestros Servicios y Soluciones Financieras
+                        </h2>
+                    </div>
                 </div>
-            </section>    
-        @endif    
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="flex flex-col rounded-xl overflow-hidden ">
+                        <img class="object-bottom" src="{{ asset('images/img/item1.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
+                        <div class="bg-white p-6 flex flex-col gap-3 rounded-b-xl">
+                            <h2 class="text-[#021226] text-lg xl:text-2xl 2xl:text-3xl font-manrope font-medium" >
+                                Consultoría Financiera  Especializada
+                            </h2>
+
+                            <div class="flex flex-col gap-2 2xl:gap-4">
+                                <div class="flex flex-row gap-1 items-start justify-start">
+                                    <svg class="mt-1.5 min-w-5 2xl:min-w-5" xmlns="http://www.w3.org/2000/svg" width="14" height="12" viewBox="0 0 12 10" fill="none">
+                                        <path d="M1.33398 6.33301L3.66732 8.66634L10.6673 1.33301" stroke="#FF680F" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <div class="flex flex-col">
+                                        <h2 class="text-[#021226] leading-none text-sm xl:text-base 2xl:text-lg font-manrope font-semibold" >
+                                            Gestión de liquidez
+                                        </h2>
+                                        <p class="text-[#021226] text-sm xl:text-base 2xl:text-lg font-manrope font-light" >
+                                            Estrategias para mantener el flujo de caja bajo control.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-row gap-1 items-start justify-start">
+                                    <svg class="mt-1.5 min-w-5 2xl:min-w-5" xmlns="http://www.w3.org/2000/svg" width="14" height="12" viewBox="0 0 12 10" fill="none">
+                                        <path d="M1.33398 6.33301L3.66732 8.66634L10.6673 1.33301" stroke="#FF680F" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <div class="flex flex-col">
+                                        <h2 class="text-[#021226] leading-none text-sm xl:text-base 2xl:text-lg font-manrope font-semibold" >
+                                            Inversiones para pequeñas empresas
+                                        </h2>
+                                        <p class="text-[#021226] text-sm xl:text-base 2xl:text-lg font-manrope font-light" >
+                                            Asesoría para rentabilizar excedentes con bajo riesgo.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-row gap-1 items-start justify-start">
+                                    <svg class="mt-1.5 min-w-5 2xl:min-w-5" xmlns="http://www.w3.org/2000/svg" width="14" height="12" viewBox="0 0 12 10" fill="none">
+                                        <path d="M1.33398 6.33301L3.66732 8.66634L10.6673 1.33301" stroke="#FF680F" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <div class="flex flex-col">
+                                        <h2 class="text-[#021226] leading-none text-sm xl:text-base 2xl:text-lg font-manrope font-semibold" >
+                                            Estructuraciónde productos financieros
+                                        </h2>
+                                        <p class="text-[#021226] text-sm xl:text-base 2xl:text-lg font-manrope font-light" >
+                                            Diseño e implementación de  mesas de cambio, casas de  cambio digitales y programas de  capacitación.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <a class="bg-[#FF680F] text-center font-manrope font-bold text-white py-2.5 w-full rounded-lg">
+                                Comenzar ahora    
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col rounded-xl overflow-hidden ">
+                        <img class="object-bottom" src="{{ asset('images/img/item2.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
+                        <div class="bg-white p-6 flex flex-col gap-3 rounded-b-xl">
+                            <h2 class="text-[#021226] text-lg xl:text-2xl 2xl:text-3xl font-manrope font-medium" >
+                                Desarrollo de Software
+                            </h2>
+
+                            <div class="flex flex-col gap-2 2xl:gap-4">
+                                <div class="flex flex-row gap-1 items-start justify-start">
+                                    <svg class="mt-1.5 min-w-5 2xl:min-w-5" xmlns="http://www.w3.org/2000/svg" width="14" height="12" viewBox="0 0 12 10" fill="none">
+                                        <path d="M1.33398 6.33301L3.66732 8.66634L10.6673 1.33301" stroke="#FF680F" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <div class="flex flex-col">
+                                        <h2 class="text-[#021226] leading-none text-sm xl:text-base 2xl:text-lg font-manrope font-semibold" >
+                                            Software a medida para cada cliente
+                                        </h2>
+                                        <p class="text-[#021226] text-sm xl:text-base 2xl:text-lg font-manrope font-light" >
+                                            Nos adaptamos a tus flujos.  Desarrollo totalmente personalizado.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-row gap-1 items-start justify-start">
+                                    <svg class="mt-1.5 min-w-5 2xl:min-w-5" xmlns="http://www.w3.org/2000/svg" width="14" height="12" viewBox="0 0 12 10" fill="none">
+                                        <path d="M1.33398 6.33301L3.66732 8.66634L10.6673 1.33301" stroke="#FF680F" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <div class="flex flex-col">
+                                        <h2 class="text-[#021226] leading-none text-sm xl:text-base 2xl:text-lg font-manrope font-semibold" >
+                                            Integración con bancos, ERPs y  sistemas contables
+                                        </h2>
+                                        <p class="text-[#021226] text-sm xl:text-base 2xl:text-lg font-manrope font-light" >
+                                            Conectamos tu operación con tus  herramientas actuales para máxima  eficiencia.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-row gap-1 items-start justify-start">
+                                    <svg class="mt-1.5 min-w-5 2xl:min-w-5" xmlns="http://www.w3.org/2000/svg" width="14" height="12" viewBox="0 0 12 10" fill="none">
+                                        <path d="M1.33398 6.33301L3.66732 8.66634L10.6673 1.33301" stroke="#FF680F" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <div class="flex flex-col">
+                                        <h2 class="text-[#021226] leading-none text-sm xl:text-base 2xl:text-lg font-manrope font-semibold" >
+                                            Implementación ágil y  acompañamiento continuo
+                                        </h2>
+                                        <p class="text-[#021226] text-sm xl:text-base 2xl:text-lg font-manrope font-light" >
+                                            Trabajamos con metodologías ágiles y  brindamos soporte post-lanzamiento.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <a class="bg-[#FF680F] text-center font-manrope font-bold text-white py-2.5 w-full rounded-lg">
+                                Comenzar ahora    
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col rounded-xl overflow-hidden ">
+                        <img class="object-bottom" src="{{ asset('images/img/item3.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
+                        <div class="bg-white p-6 flex flex-col gap-3 rounded-b-xl">
+                            <h2 class="text-[#021226] text-lg xl:text-2xl 2xl:text-3xl font-manrope font-medium" >
+                                Soluciones Financieras
+                            </h2>
+
+                            <div class="flex flex-col gap-2 2xl:gap-4">
+                                <div class="flex flex-row gap-1 items-start justify-start">
+                                    <svg class="mt-1.5 min-w-5 2xl:min-w-5" xmlns="http://www.w3.org/2000/svg" width="14" height="12" viewBox="0 0 12 10" fill="none">
+                                        <path d="M1.33398 6.33301L3.66732 8.66634L10.6673 1.33301" stroke="#FF680F" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <div class="flex flex-col">
+                                        <h2 class="text-[#021226] leading-none text-sm xl:text-base 2xl:text-lg font-manrope font-semibold" >
+                                            Plataforma de casa de cambio  digital
+                                        </h2>
+                                        <p class="text-[#021226] text-sm xl:text-base 2xl:text-lg font-manrope font-light" >
+                                            Cotización, operaciones y gestión  cambiaria automatizada en un solo  lugar.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-row gap-1 items-start justify-start">
+                                    <svg class="mt-1.5 min-w-5 2xl:min-w-5" xmlns="http://www.w3.org/2000/svg" width="14" height="12" viewBox="0 0 12 10" fill="none">
+                                        <path d="M1.33398 6.33301L3.66732 8.66634L10.6673 1.33301" stroke="#FF680F" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <div class="flex flex-col">
+                                        <h2 class="text-[#021226] leading-none text-sm xl:text-base 2xl:text-lg font-manrope font-semibold" >
+                                            Sistema back office de tesorería
+                                        </h2>
+                                        <p class="text-[#021226] text-sm xl:text-base 2xl:text-lg font-manrope font-light" >
+                                            Control total de operaciones  financieras, conciliaciones y flujos de  caja.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-row gap-1 items-start justify-start">
+                                    <svg class="mt-1.5 min-w-5 2xl:min-w-5" xmlns="http://www.w3.org/2000/svg" width="14" height="12" viewBox="0 0 12 10" fill="none">
+                                        <path d="M1.33398 6.33301L3.66732 8.66634L10.6673 1.33301" stroke="#FF680F" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <div class="flex flex-col">
+                                        <h2 class="text-[#021226] leading-none text-sm xl:text-base 2xl:text-lg font-manrope font-semibold" >
+                                            Integración de pagos con bancos
+                                        </h2>
+                                        <p class="text-[#021226] text-sm xl:text-base 2xl:text-lg font-manrope font-light" >
+                                            Conectamos tu sistema con múltiples  bancos para pagos directos y seguros.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-row gap-1 items-start justify-start">
+                                    <svg class="mt-1.5 min-w-5 2xl:min-w-5" xmlns="http://www.w3.org/2000/svg" width="14" height="12" viewBox="0 0 12 10" fill="none">
+                                        <path d="M1.33398 6.33301L3.66732 8.66634L10.6673 1.33301" stroke="#FF680F" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <div class="flex flex-col">
+                                        <h2 class="text-[#021226] leading-none text-sm xl:text-base 2xl:text-lg font-manrope font-semibold" >
+                                            Dashboard de monitoreo y control
+                                        </h2>
+                                        <p class="text-[#021226] text-sm xl:text-base 2xl:text-lg font-manrope font-light" >
+                                            Visualiza y gestiona indicadores en  tiempo real.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <a class="bg-[#FF680F] text-center font-manrope font-bold text-white py-2.5 w-full rounded-lg">
+                                Comenzar ahora    
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="px-[5%] bg-cover bg-center" style="background-image: url({{ asset('images/img/texturaend.png') }})">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-10">
+                
+                <div class="flex flex-col justify-end items-center">
+                    <img class="object-bottom" src="{{ asset('images/img/chicoc.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
+                </div>
+                
+                <div class="py-10 lg:py-20 flex flex-col gap-3">
+                    
+                    <div class="flex flex-col gap-2">
+                        <h2 class="text-[#f26824] font-manrope font-extrabold text-lg xl:text-xl 2xl:text-2xl !tracking-normal" data-aos="fade-down">
+                            Quienes somos
+                        </h2>
+                        <p class="text-[#021226] text-lg 2xl:text-xl font-manrope font-normal !tracking-normal" data-aos="fade-down">
+                            Nuestro equipo combina experiencia en tecnología y  finanzas para brindar servicios diferenciados
+                        </p>
+                    </div>
+                   
+                    <div class="flex flex-col gap-3">
+                        <h2 class="text-[#021226] text-3xl xl:text-4xl 2xl:text-5xl font-manrope font-bold" data-aos="fade-down">
+                            Nuestro compromiso
+                        </h2>
+                    </div>
+
+                    <div class="grid grid-cols-1">
+                        <div class="flex flex-col gap-2 justify-center text-base 2xl:text-lg items-start bg-white rounded-xl overflow-hidden p-6" data-aos="fade-down">
+                            
+                            <div class="flex flex-row gap-2 mb-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19" fill="none">
+                                    <path d="M9.04894 0.927052C9.3483 0.00574112 10.6517 0.00573993 10.9511 0.927051L12.4697 5.60081C12.6035 6.01284 12.9875 6.2918 13.4207 6.2918H18.335C19.3037 6.2918 19.7065 7.53141 18.9228 8.10081L14.947 10.9894C14.5966 11.244 14.4499 11.6954 14.5838 12.1074L16.1024 16.7812C16.4017 17.7025 15.3472 18.4686 14.5635 17.8992L10.5878 15.0106C10.2373 14.756 9.7627 14.756 9.41221 15.0106L5.43648 17.8992C4.65276 18.4686 3.59828 17.7025 3.89763 16.7812L5.41623 12.1074C5.55011 11.6954 5.40345 11.244 5.05296 10.9894L1.07722 8.10081C0.293507 7.53141 0.696283 6.2918 1.66501 6.2918H6.57929C7.01252 6.2918 7.39647 6.01284 7.53035 5.60081L9.04894 0.927052Z" fill="#FF680F"/>
+                                </svg>
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19" fill="none">
+                                    <path d="M9.04894 0.927052C9.3483 0.00574112 10.6517 0.00573993 10.9511 0.927051L12.4697 5.60081C12.6035 6.01284 12.9875 6.2918 13.4207 6.2918H18.335C19.3037 6.2918 19.7065 7.53141 18.9228 8.10081L14.947 10.9894C14.5966 11.244 14.4499 11.6954 14.5838 12.1074L16.1024 16.7812C16.4017 17.7025 15.3472 18.4686 14.5635 17.8992L10.5878 15.0106C10.2373 14.756 9.7627 14.756 9.41221 15.0106L5.43648 17.8992C4.65276 18.4686 3.59828 17.7025 3.89763 16.7812L5.41623 12.1074C5.55011 11.6954 5.40345 11.244 5.05296 10.9894L1.07722 8.10081C0.293507 7.53141 0.696283 6.2918 1.66501 6.2918H6.57929C7.01252 6.2918 7.39647 6.01284 7.53035 5.60081L9.04894 0.927052Z" fill="#FF680F"/>
+                                </svg>
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19" fill="none">
+                                    <path d="M9.04894 0.927052C9.3483 0.00574112 10.6517 0.00573993 10.9511 0.927051L12.4697 5.60081C12.6035 6.01284 12.9875 6.2918 13.4207 6.2918H18.335C19.3037 6.2918 19.7065 7.53141 18.9228 8.10081L14.947 10.9894C14.5966 11.244 14.4499 11.6954 14.5838 12.1074L16.1024 16.7812C16.4017 17.7025 15.3472 18.4686 14.5635 17.8992L10.5878 15.0106C10.2373 14.756 9.7627 14.756 9.41221 15.0106L5.43648 17.8992C4.65276 18.4686 3.59828 17.7025 3.89763 16.7812L5.41623 12.1074C5.55011 11.6954 5.40345 11.244 5.05296 10.9894L1.07722 8.10081C0.293507 7.53141 0.696283 6.2918 1.66501 6.2918H6.57929C7.01252 6.2918 7.39647 6.01284 7.53035 5.60081L9.04894 0.927052Z" fill="#FF680F"/>
+                                </svg>
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19" fill="none">
+                                    <path d="M9.04894 0.927052C9.3483 0.00574112 10.6517 0.00573993 10.9511 0.927051L12.4697 5.60081C12.6035 6.01284 12.9875 6.2918 13.4207 6.2918H18.335C19.3037 6.2918 19.7065 7.53141 18.9228 8.10081L14.947 10.9894C14.5966 11.244 14.4499 11.6954 14.5838 12.1074L16.1024 16.7812C16.4017 17.7025 15.3472 18.4686 14.5635 17.8992L10.5878 15.0106C10.2373 14.756 9.7627 14.756 9.41221 15.0106L5.43648 17.8992C4.65276 18.4686 3.59828 17.7025 3.89763 16.7812L5.41623 12.1074C5.55011 11.6954 5.40345 11.244 5.05296 10.9894L1.07722 8.10081C0.293507 7.53141 0.696283 6.2918 1.66501 6.2918H6.57929C7.01252 6.2918 7.39647 6.01284 7.53035 5.60081L9.04894 0.927052Z" fill="#FF680F"/>
+                                </svg>
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19" fill="none">
+                                    <path d="M9.04894 0.927052C9.3483 0.00574112 10.6517 0.00573993 10.9511 0.927051L12.4697 5.60081C12.6035 6.01284 12.9875 6.2918 13.4207 6.2918H18.335C19.3037 6.2918 19.7065 7.53141 18.9228 8.10081L14.947 10.9894C14.5966 11.244 14.4499 11.6954 14.5838 12.1074L16.1024 16.7812C16.4017 17.7025 15.3472 18.4686 14.5635 17.8992L10.5878 15.0106C10.2373 14.756 9.7627 14.756 9.41221 15.0106L5.43648 17.8992C4.65276 18.4686 3.59828 17.7025 3.89763 16.7812L5.41623 12.1074C5.55011 11.6954 5.40345 11.244 5.05296 10.9894L1.07722 8.10081C0.293507 7.53141 0.696283 6.2918 1.66501 6.2918H6.57929C7.01252 6.2918 7.39647 6.01284 7.53035 5.60081L9.04894 0.927052Z" fill="#FF680F"/>
+                                </svg>
+                            </div>
+
+                            <p class="text-[#021226] text-lg 2xl:text-xl font-manrope font-medium !tracking-normal">
+                                En Codefinan, no solo brindamos soluciones:  nos comprometemos con tus resultados.
+                            </p>
+                            <p class="text-[#021226] text-lg 2xl:text-xl font-manrope font-medium !tracking-normal">
+                                Nuestra experiencia se traduce en estrategias  efectivas, seguras y escalables que impulsan el  crecimiento sostenible de cada proyecto que  acompañamos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
 
     </main>
 
@@ -1155,7 +965,7 @@
                     spaceBetween: 50,
                 },
                 1600: {
-                    slidesPerView: 4,
+                    slidesPerView: 3,
                     spaceBetween: 60,
                 },
             },

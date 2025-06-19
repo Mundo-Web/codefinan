@@ -925,3 +925,5 @@ src: url("/fonts/gotham-light.woff") format("woff");
     font-family: "merchant_regular";
     src: url("/fonts/merchant_regular.woff") format("woff");
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
