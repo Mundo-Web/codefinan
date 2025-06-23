@@ -76,6 +76,8 @@ use App\Models\Template;
 /* Las rutas publicas */
 
 Route::get('/', [IndexController::class, 'index'])->name('index');
+Route::get('/agradecimiento', [IndexController::class, 'agradecimientocontacto'])->name('agradecimiento');
+
 // Route::get('/nosotros', [IndexController::class, 'nosotros'])->name('nosotros');
 // Route::get('/innovaciones', [IndexController::class, 'innovaciones'])->name('innovaciones');
 // Route::get('/servicios', [IndexController::class, 'novedades'])->name('novedades');

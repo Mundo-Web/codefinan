@@ -1498,4 +1498,8 @@ class IndexController extends Controller
         }
        
       }
+
+      public function agradecimientocontacto(){
+        return view('public.agradecimientocontacto');
+      }
 }

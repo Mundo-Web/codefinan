@@ -150,9 +150,12 @@
                     Swal.fire({
                         title: response.message,
                         icon: "success",
+                    }).then((result) => {
+                        $('#formContactos')[0].reset();
+                        window.location.href = '/agradecimiento'; // Reemplaza con tu ruta
                     });
 
-                    $('#formContactos')[0].reset();
+                   
                 },
                 error: function(error) {
                     Swal.close();
