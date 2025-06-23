@@ -19,7 +19,7 @@ class EmailConfig
         $mail->Port = 465;
         $mail->Subject = '' . $name . ', ' . $mensaje;
         $mail->CharSet = 'UTF-8';
-        $mail->setFrom('info@draadrianapezo.com', 'Adriana Pezo');
+        $mail->setFrom('contacto@codefinan.com', 'Codefinan S.A.C.');
         return $mail;
     }
 }

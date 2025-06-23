@@ -830,6 +830,8 @@ class IndexController extends Controller
     {
         $data = $request->all();
         $data['full_name'] = $request->full_name;
+        $data['comunication'] = $request->ruc;
+        $data['service_product'] = $request->business;
         $ipAddress = $request->ip();
         $ancho = $request->client_width;
         $latitud = $request->client_latitude;
@@ -1066,7 +1068,7 @@ class IndexController extends Controller
           <head>
             <meta charset="UTF-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <title>Dimensión Lider</title>
+            <title>Codefinan</title>
             <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
             <link
@@ -1226,7 +1228,7 @@ class IndexController extends Controller
           <head>
             <meta charset="UTF-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <title>Dimensión Lider</title>
+            <title>Codefinanr</title>
             <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
             <link

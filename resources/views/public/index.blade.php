@@ -69,7 +69,7 @@
                                 <h2 class="text-white text-base sm:text-lg xl:text-xl 2xl:text-2xl font-manrope font-medium !tracking-wide">
                                     Consultoría y tecnología  financiera adaptadas a tu  medida
                                 </h2>
-                                <form class="space-y-2 4xs:space-y-4 2xl:space-y-4" id="dataWhatsapp">
+                                <form class="space-y-2 4xs:space-y-4 2xl:space-y-4" id="formContactos">
                                   @csrf
                                   
                                   <div class="flex flex-col gap-1">
@@ -82,14 +82,14 @@
                                   <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     <div class="flex flex-col gap-1">
                                         <label class="text-white font-manrope text-sm 2xl:text-lg">DNI/RUC (*)</label>
-                                        <input type="text" name="full_name" placeholder="Ingresa tu DNI/RUC" 
+                                        <input type="text" name="ruc" placeholder="Ingresa tu DNI/RUC" 
                                           class="border-0  focus:!border-0 focus:!ring-0 focus:!ring-transparent
                                           placeholder:text-[#AAC3E6] text-[#031730] font-manrope w-full py-2.5 px-2 rounded-lg text-sm 2xl:text-lg  placeholder-opacity-25 font-light  bg-white">
                                     </div>
 
                                     <div class="flex flex-col gap-1">
                                         <label class="text-white font-manrope text-sm 2xl:text-lg">Teléfono (*)</label>
-                                        <input type="text" name="phone" placeholder="+51" 
+                                        <input type="text" name="phone" placeholder="+51" id="telefonoContacto"
                                           class="border-0  focus:!border-0 focus:!ring-0 focus:!ring-transparent
                                           placeholder:text-[#AAC3E6] text-[#031730] font-manrope w-full py-2.5 px-2 rounded-lg text-sm 2xl:text-lg  placeholder-opacity-25 font-light  bg-white">
                                     </div>
@@ -98,14 +98,14 @@
                                   <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     <div class="flex flex-col gap-1">
                                         <label class="text-white font-manrope text-sm 2xl:text-lg">Correo electrónico (*)</label>
-                                        <input type="email" name="email" placeholder="tu@mail.com" 
+                                        <input type="email" name="email" placeholder="tu@mail.com" id="emailContacto"
                                           class="border-0  focus:!border-0 focus:!ring-0 focus:!ring-transparent
                                           placeholder:text-[#AAC3E6] text-[#031730] font-manrope w-full py-2.5 px-2 rounded-lg text-sm 2xl:text-lg  placeholder-opacity-25 font-light  bg-white">
                                     </div>
 
                                     <div class="flex flex-col gap-1">
                                         <label class="text-white font-manrope text-sm 2xl:text-lg">Empresa</label>
-                                        <input type="text" name="full_name" placeholder="Nombre de la empresa" 
+                                        <input type="text" name="business" placeholder="Nombre de la empresa" 
                                           class="border-0  focus:!border-0 focus:!ring-0 focus:!ring-transparent
                                           placeholder:text-[#AAC3E6]  text-[#031730] font-manrope w-full py-2.5 px-2 rounded-lg text-sm 2xl:text-lg  placeholder-opacity-25 font-light  bg-white">
                                     </div>
@@ -113,7 +113,7 @@
 
                                   <div class="flex flex-col gap-1">
                                     <label class="text-white font-manrope text-sm 2xl:text-lg">Requerimiento (*)</label>
-                                    <textarea rows="1" name="full_name" placeholder="Necesito..." 
+                                    <textarea rows="1" name="message" placeholder="Necesito..." 
                                       class="border-0  focus:!border-0 focus:!ring-0 focus:!ring-transparent
                                       placeholder:text-[#AAC3E6] text-[#031730] font-manrope w-full py-2.5 px-2 rounded-lg text-sm 2xl:text-lg  placeholder-opacity-25 font-light  bg-white"></textarea>
                                   </div>
@@ -451,7 +451,7 @@
                                     </div>
                                 </div>
 
-                                <div class="flex flex-row gap-1 items-start justify-start">
+                                {{-- <div class="flex flex-row gap-1 items-start justify-start">
                                     <svg class="mt-1.5 min-w-5 2xl:min-w-5" xmlns="http://www.w3.org/2000/svg" width="14" height="12" viewBox="0 0 12 10" fill="none">
                                         <path d="M1.33398 6.33301L3.66732 8.66634L10.6673 1.33301" stroke="#FF680F" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
@@ -463,7 +463,7 @@
                                             Visualiza y gestiona indicadores en  tiempo real.
                                         </p>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                             
                             <a class="bg-[#FF680F] text-center font-manrope font-bold text-white py-2.5 w-full rounded-lg">
