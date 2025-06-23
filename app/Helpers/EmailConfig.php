@@ -11,15 +11,15 @@ class EmailConfig
         $mail = new PHPMailer(true);
         // $mail->SMTPDebug = SMTP::DEBUG_SERVER;
         $mail->isSMTP();
-        $mail->Host = 'mail.draadrianapezo.com';
+        $mail->Host = 'mail.codefinan.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'info@draadrianapezo.com';
-        $mail->Password = 'adrianapezo2025#';
+        $mail->Username = 'info@codefinan.com';
+        $mail->Password = 'infocodefinan2025#';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port = 465;
         $mail->Subject = '' . $name . ', ' . $mensaje;
         $mail->CharSet = 'UTF-8';
-        $mail->setFrom('contacto@codefinan.com', 'Codefinan S.A.C.');
+        $mail->setFrom('info@codefinan.com', 'Codefinan S.A.C.');
         return $mail;
     }
 }
