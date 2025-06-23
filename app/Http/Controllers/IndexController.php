@@ -1124,13 +1124,14 @@ class IndexController extends Controller
                       <p
                         style="
                           color: white;
-                          font-size: 40px;
+                          font-size: 37px;
                           line-height: normal;
                           font-family: Roboto;
                           font-weight: bold;
                         "
                       >
-                        ¡Nuevo mensaje en codefinan.pe!
+                        ¡Nuevo mensaje en 
+                        <span style="color: white">codefinan.pe!</span>
                       </p>
                     </td>
                   </tr>
@@ -1284,7 +1285,7 @@ class IndexController extends Controller
                       <p
                         style="
                           color: white;
-                          font-size: 40px;
+                          font-size: 37px;
                           line-height: normal;
                           font-family: Roboto;
                           font-weight: bold;
