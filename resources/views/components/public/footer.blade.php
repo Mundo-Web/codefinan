@@ -15,7 +15,7 @@
                 <h3 class="text-2xl 2xl:text-3xl font-manrope font-bold text-white">Conversemos, agenda tu cita ahora</h3>
                 
                 <div class="flex">
-                    <a class="w-auto bg-[#4eba61] font-manrope font-extrabold text-white px-5 sm:px-10 py-3 rounded-md uppercase tracking-wide flex flex-row gap-2">
+                    <a target="_blank" href="https://api.whatsapp.com/send?phone=51{{ $general[0]->whatsapp }}&text={{ $general[0]->mensaje_whatsapp }}" class="w-auto bg-[#4eba61] font-manrope font-extrabold text-white px-5 sm:px-10 py-3 rounded-md uppercase tracking-wide flex flex-row gap-2">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <g clip-path="url(#clip0_57_247)">
                           <path d="M0 24.0002C0.12869 23.5263 0.248084 23.0822 0.369923 22.6391C0.789268 21.1102 1.21302 19.5827 1.62355 18.0513C1.65487 17.9347 1.63432 17.7761 1.57805 17.6677C-0.391453 13.8705 -0.483445 10.0376 1.54037 6.26187C3.32344 2.93558 6.1419 0.835656 9.88077 0.209535C14.8752 -0.62692 18.9918 1.04257 21.8725 5.18873C26.7823 12.2547 22.7601 21.9403 14.246 23.5985C11.5635 24.1207 8.98826 23.7162 6.55195 22.4746C6.38607 22.3902 6.24221 22.3785 6.06557 22.4254C4.12787 22.9373 2.18822 23.4429 0.248573 23.9489C0.180068 23.967 0.110096 23.9777 0 24.0002ZM2.87327 21.178C4.04273 20.872 5.15593 20.5895 6.26276 20.2854C6.52014 20.2147 6.71587 20.2498 6.94438 20.384C9.13603 21.6714 11.4921 22.0984 13.9842 21.5962C21.021 20.1781 24.2955 12.0478 20.1246 6.21307C17.7309 2.86481 14.3575 1.50326 10.2923 2.17574C5.62323 2.94875 2.24645 6.94509 2.1207 11.6705C2.06638 13.7109 2.61882 15.5917 3.73006 17.3061C3.82988 17.4603 3.86071 17.595 3.80688 17.78C3.55978 18.6311 3.33029 19.4865 3.09591 20.3411C3.02349 20.6041 2.95547 20.8686 2.87327 21.178Z" fill="white"/>
@@ -41,13 +41,13 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 6 6" fill="none">
                             <circle cx="3" cy="3" r="3" fill="white"/>
                         </svg>
-                        (+51) 999 999 999
+                        (+51) {{ $general[0]->whatsapp ?? '999 999 999' }}
                     </a>
                     <a class="flex flex-row gap-2 items-center justify-start">
                         <svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 6 6" fill="none">
                             <circle cx="3" cy="3" r="3" fill="white"/>
                         </svg>
-                        contacto@codefinan.com
+                        {{ $general[0]->email ?? 'contacto@codefinan.com' }}
                     </a>
                     <a class="flex flex-row gap-2 items-center justify-start">
                         <svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 6 6" fill="none">
