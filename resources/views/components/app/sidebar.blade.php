@@ -21,7 +21,7 @@
       </button>
       <!-- Logo -->
       <a class="block mt-8 " href="{{ route('dashboard') }}">
-        <img class="w-full" src="{{ asset('images/svg/logocodefinan.svg') }}" alt="AdrianaPezo" />
+        <img class="w-full" src="{{ asset('images/svg/logocodefinan.svg') }}" alt="Codefinan" />
       </a>
     </div>
 
