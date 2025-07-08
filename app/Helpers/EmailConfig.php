@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Helpers;
-
+use App\Models\General;
 use PHPMailer\PHPMailer\PHPMailer;
 
 class EmailConfig
