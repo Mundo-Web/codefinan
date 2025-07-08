@@ -17,8 +17,8 @@ class EmailConfig
         $mail->SMTPAuth = true;
         $mail->Username = $datosemail->emailsend;
         $mail->Password = $datosemail->contrasend;
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-        $mail->Port = 465;
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port = 587;
         $mail->Subject = '' . $name . ', ' . $mensaje;
         $mail->CharSet = 'UTF-8';
         $mail->setFrom($datosemail->emailsend, 'Codefinan S.A.C.');
