@@ -895,7 +895,9 @@ class IndexController extends Controller
 
             return response()->json(['message' => 'Mensaje enviado con exito']);
         } catch (ValidationException $e) {
-            return response()->json(['message' => $e->validator->errors()], 400);
+          return response()->json([
+            'message' => 'Error al enviar correo: ' . $th->getMessage()
+          ], 500);
         }
     }
 
@@ -1209,7 +1211,8 @@ class IndexController extends Controller
           $mail->isHTML(true);
           $mail->send();
         } catch (\Throwable $th) {
-          //throw $th;
+          Log::error('Error al enviar correo (Admin): ' . $th->getMessage());
+          throw new \Exception('No se pudo enviar el correo al administrador. Detalle: ' . $th->getMessage());
         }
     }
 
@@ -1370,7 +1373,8 @@ class IndexController extends Controller
           $mail->isHTML(true);
           $mail->send();
         } catch (\Throwable $th) {
-          //throw $th;
+          Log::error('Error al enviar correo (Admin): ' . $th->getMessage());
+          throw new \Exception('No se pudo enviar el correo al administrador. Detalle: ' . $th->getMessage());
         }
     }
 
