@@ -58,6 +58,8 @@ use Intervention\Image\Drivers\Gd\Driver;
 use Intervention\Image\ImageManager;
 use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
+use Illuminate\Support\Facades\Log;
+use PHPMailer\PHPMailer\Exception;
 
 use function PHPUnit\Framework\isNull;
 
