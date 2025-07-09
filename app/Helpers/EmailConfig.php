@@ -9,7 +9,6 @@ class EmailConfig
     static function config($name, $mensaje): PHPMailer
     {
         $datosemail = General::first();
-        dd($datosemail);
         $mail = new PHPMailer(true);
         // $mail->SMTPDebug = SMTP::DEBUG_SERVER;
         $mail->isSMTP();
