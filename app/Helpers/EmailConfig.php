@@ -11,7 +11,7 @@ class EmailConfig
     {
         $datosemail = General::first();
         $mail = new PHPMailer(true);
-        $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+        // $mail->SMTPDebug = SMTP::DEBUG_SERVER;
         $mail->isSMTP();
         $mail->Host = $datosemail->smtp;
         $mail->SMTPAuth = true;
